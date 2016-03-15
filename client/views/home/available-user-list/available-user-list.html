@@ -1,0 +1,12 @@
+<!-- display a list of users -->
+<template name="availableUserList">
+
+    <h2>Choose someone to chat with:</h2>
+    <div class="row">
+        {{#each user in users}}
+            {{> availableUser user=user}}
+        {{/each}}
+    </div>
+
+</template>
+

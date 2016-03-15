@@ -1,0 +1,10 @@
+<!-- this is the main template used by iron:router to build the page -->
+<template name="applicationLayout">
+
+    {{> yield region="header"}}
+
+    <div class="container">
+        {{> yield region="main"}}
+    </div>
+
+</template>

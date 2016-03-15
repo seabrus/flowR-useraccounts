@@ -1,0 +1,12 @@
+<!-- simple template that displays a message -->
+<template name="chatMessage">
+
+    {{#let me=(isMe message.createdBy)}}
+        <span class="{{#if me}}my-message{{else}}other-message{{/if}}">
+            <b>{{#if me}}me{{else}}{{message.createdBy}}{{/if}}</b>
+            <i>({{formatDate message.createdAt}})</i></span>:
+        {{{formatText message.text}}}
+    <br>
+    {{/let}}
+
+</template>

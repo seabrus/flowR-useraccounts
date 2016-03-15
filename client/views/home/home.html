@@ -1,0 +1,26 @@
+<!-- Top level template for the home page -->
+<template name="home">
+
+    {{#if currentUser}}
+        {{> availableUserList ""}}
+    {{else}}
+
+        {{#if globalReady}}
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="jumbotron bg-green">
+                        <div class="text-center">
+                            <h2>Welcome to Minstant!</h2>
+                            <p>Please log in to start chating</p>
+                        </div>
+                        <div class="text-center copyright">by seabrus</div>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            {{> loadingView ""}}
+        {{/if}}
+
+    {{/if}}
+
+</template>

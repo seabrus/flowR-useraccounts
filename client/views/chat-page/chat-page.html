@@ -1,0 +1,53 @@
+<!-- Top level template for the chat page -->
+<template name="chatPage">
+
+    <h3>Chat history</h3>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="well well-lg bg-green bg-no-image height-200" id="chat-history-div">
+                {{#let messagesLength=messages.count}}
+                    {{#each message in messages}}
+                        {{> chatMessage message=message messagesNum=messagesLength index=@index}}
+                    {{/each}}
+                {{/let}}
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="text-center width-100"> 
+                <img src="/{{companion.profile.avatar}}" class="avatar-img" alt="Companion avatar">
+                <p>{{companion.username}}<br>
+                    <img src="/status/{{#if isCompanionOnline}}green.png{{else}}red.png{{/if}}"
+                        title="{{#if isCompanionOnline}}Online{{else}}Offline{{/if}}">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h3>Type in below to send a message
+        <span class="font-half-em">(no more than 500 symbols)</span>
+    </h3>
+    <div class="row">
+        <div class="col-md-10">
+            <div>
+                {{#each emo in emos}}
+                    <img src="/icons/{{emo.image}}" class="emo js-emo" data-emo="{{emo.sign}}" title="{{emo.title}}">
+                {{/each}}
+            </div>
+            <form class="js-send-chat">
+                <div class="form-group">
+                    <textarea class="form-control bg-yellow" rows="3" id="textarea_id"
+                        name="chat-textarea" placeholder="Type a message here..." value=""></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="inline-block width-50 text-left">
+                        <button class="btn btn-primary">Send</button>
+                    </div>
+                    <div class="inline-block width-50 text-right">
+                        <button class="btn btn-default js-remove-messages">Remove All Messages</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</template>

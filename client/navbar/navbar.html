@@ -1,0 +1,25 @@
+<!-- top level template for the nav bar -->
+<template name="navbar">
+
+<!-- see https://useraccounts-bootstrap.meteor.com/sign-in for better positioning -->
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                Minstant!
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li> {{> atNavButton}} </li>
+<!--            {{> atForm}} -->
+<!--            {{> loginButtons}} -->
+        </ul>
+
+    </div>
+  </div>
+</nav>
+
+</template>

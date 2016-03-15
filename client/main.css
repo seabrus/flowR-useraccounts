@@ -1,0 +1,60 @@
+.user-avatar {
+    min-height: 100px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.avatar-img {
+    height: 75px;
+}
+
+.bg-yellow {
+    background-color: #fefdeb;
+}
+
+.bg-green {
+    background-color: #d8f3e2; /* #ebf5d6 #e9fce9; */
+}
+
+.top-padding-10 {
+    padding-top: 10px;
+}
+
+.bg-no-image {
+    background-image: none;
+}
+
+.width-100 {
+    width: 100%;
+}
+.width-50 {
+    width: 49%;
+}
+.inline-block {
+    display: inline-block;
+}
+
+.my-message {
+    color: darkblue;
+}
+.other-message {
+    color: red;
+}
+
+.emo {
+    width: 1.5em;
+}
+
+.height-200 {
+    max-height: 200px;
+    overflow-y: auto;
+}
+.font-half-em {
+    font-size: 0.75em;
+}
+
+.copyright {
+    margin: 40px 0 -20px 0;
+    font-size: 0.8em;
+    color: #aaaaaa;
+}
