@@ -16,7 +16,6 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-iron:router
 accounts-password
 twbs:bootstrap
 check
@@ -27,4 +26,7 @@ less
 force-ssl
 mizzao:user-status
 useraccounts:bootstrap
-useraccounts:iron-routing
+kadira:flow-router
+useraccounts:flow-routing
+zimme:active-route
+kadira:blaze-layout

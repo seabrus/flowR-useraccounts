@@ -3,8 +3,8 @@
 // and the password test123
 
 Meteor.startup(function() {
-    if (!Meteor.users.findOne()) {
-        for (var i=1; i < 9; i++) {
+    if (! Meteor.users.findOne()) {
+        for (var i = 1; i < 9; i++) {
             var email = "user" + i + "@test.com";
             var username = "user" + i;
             var avatar = "ava" + i + ".png";
@@ -12,11 +12,12 @@ Meteor.startup(function() {
             console.log("Creating a user with username / email: " + email);
             Meteor.users.insert({
                 username: username,
-                emails: [ {address: email} ],
-                profile: {username: username, avatar: avatar},
-                services: {password: {"bcrypt": "$2a$10$I3erQ084OiyILTv8ybtQ4ON6wusgPbMZ6.P33zzSDei.BbDL.Q4EO"}},
+                emails: [{ address: email }],
+                profile: { username: username, avatar: avatar },
+                services: { password: { "bcrypt": "$2a$10$I3erQ084OiyILTv8ybtQ4ON6wusgPbMZ6.P33zzSDei.BbDL.Q4EO" } },
+                status: { 'online' : false },
             });
-        } // end of " for (var i=1;... "
+        } // end of  "for (var i=1;... "
     }
 });
 
